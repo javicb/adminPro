@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { Grafica1Component } from './grafica1/grafica1.component';
+import { ProgressComponent } from './progress/progress.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'grafica1', component: Grafica1Component },
+      { path: 'progress', component: ProgressComponent },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

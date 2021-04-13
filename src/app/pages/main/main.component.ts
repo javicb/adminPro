@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  year = new Date().getFullYear();
+
   constructor() { }
 
   ngOnInit(): void {

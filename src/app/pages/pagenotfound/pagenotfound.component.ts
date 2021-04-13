@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagenotfoundComponent implements OnInit {
 
+  year = new Date().getFullYear();
+
   constructor() { }
 
   ngOnInit(): void {

@@ -4,7 +4,12 @@
       <div class="card-body">
         <div class="progress m-t-20">
           <div class="progress-bar active bg-info progress-bar-striped" style="height:10px;" role="progressbar"
-            [style.width]="getPorcentaje"></div>
+            [style.width]="getPorcentaje1"></div>
+        </div>
+        <div class="progress m-t-20">
+          <div class="progress-bar active bg-primary progress-bar-striped" style="height:10px;" role="progressbar"
+            [style.width]="getPorcentaje2">
+          </div>
         </div>
       </div>
     </div>
@@ -12,28 +17,21 @@
 </div>
 
 <div class="row">
+
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <div class="input-group">
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"><em class="fa fa-minus"
-                (click)="cambiarValor(-5)"></em></button>
-          </span>
-          <input type="number" class="form-control" placeholder="Progress" [(ngModel)]="progreso">
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"><em class="fa fa-plus"
-                (click)="cambiarValor(+5)"></em></button>
-          </span>
-        </div>
+        <app-incrementar (valor)="progreso1 = $event" [valor]="progreso1"></app-incrementar>
       </div>
     </div>
   </div>
+
   <div class=" col-6">
     <div class="card">
       <div class="card-body">
-        2
+        <app-incrementar (valor)="progreso2 = $event" [valor]="progreso2"></app-incrementar>
       </div>
     </div>
   </div>
+
 </div>

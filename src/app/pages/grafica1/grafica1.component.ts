@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartType } from 'chart.js';
-import { MultiDataSet, Label } from 'ng2-charts';
+
 
 @Component({
   selector: 'app-grafica1',
@@ -10,20 +9,23 @@ import { MultiDataSet, Label } from 'ng2-charts';
 })
 export class Grafica1Component implements OnInit {
 
-  public doughnutChartLabels: Label[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData: MultiDataSet = [
-    [350, 450, 100]
-  ];
-  public doughnutChartType: ChartType = 'doughnut';
+  titulo1 = 'Ventas';
+  titulo2 = 'Compras';
+  titulo3 = 'Otras ventas';
+  titulo4 = 'Otras compras';
+
+  labels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  labels2 = ['Sales', 'Sales', 'Mail-Order'];
+  labels3 = ['Download', 'In-Store', 'Mail-Order'];
+  labels4 = ['DS', 'ISS', 'MOS'];
+  doughnutChartData1 = [[350, 450, 100]];
+  doughnutChartData2 = [[450, 350, 150]];
+  doughnutChartData3 = [[550, 250, 200]];
+  doughnutChartData4 = [[650, 150, 250]];
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  // events
-  public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
   }
 
 }

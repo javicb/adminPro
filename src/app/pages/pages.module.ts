@@ -10,6 +10,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { MainComponent } from './main/main.component';
 import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PromesasComponent } from './promesas/promesas.component';
     ProgressComponent,
     Grafica1Component,
     MainComponent,
-    PromesasComponent
+    PromesasComponent,
+    RxjsComponent
   ],
   imports: [
     CommonModule,

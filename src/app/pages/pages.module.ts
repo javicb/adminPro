@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { MainComponent } from './main/main.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MainComponent } from './main/main.component';
     DashboardComponent,
     ProgressComponent,
     Grafica1Component,
-    MainComponent
+    MainComponent,
+    PromesasComponent
   ],
   imports: [
     CommonModule,
